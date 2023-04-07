@@ -6,20 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "playwright test"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@jest/globals": "^29.5.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
-    "autoprefixer": "10.4.14",
+    "autoprefixer": "^10.4.14",
+    "date-fns": "^2.29.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",
-    "postcss": "8.4.21",
+    "playwright": "^1.32.2",
+    "postcss": "^8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1",
+    "sass": "^1.61.0",
+    "sass-loader": "^13.2.2",
+    "styled-components": "^5.3.9",
+    "tailwindcss": "^3.3.1",
     "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.32.2",
+    "@types/styled-components": "^5.1.26"
   }
 }

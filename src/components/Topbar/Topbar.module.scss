@@ -1,0 +1,16 @@
+.topbar {
+  @apply flex justify-between items-center bg-gray-900 text-white py-2 px-4 text-sm absolute top-0 left-0 right-0;
+}
+
+.dateTime {
+  @apply mr-4 flex;
+}
+
+.icons {
+  @apply flex ;
+}
+
+.wifiIcon,
+.chargeIcon {
+  @apply mr-4;
+}
