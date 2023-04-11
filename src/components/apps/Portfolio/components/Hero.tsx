@@ -1,8 +1,10 @@
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
 
+import { statementsWhatIDo } from "@/data";
+import Desc from "./Desc";
 import Navbar from "./Navbar";
 
 const Section = styled.div`
@@ -61,10 +63,7 @@ const Line = styled.img`
 const Subtitle = styled.h2`
   color: #da4ea2;
 `;
-const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
-`;
+
 const Button = styled.button`
   background-color: #da4ea2;
   color: white;
@@ -84,8 +83,8 @@ const Right = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 700px;
-  height: 500px;
+  width: 500px;
+  height: 400px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -94,6 +93,7 @@ const Img = styled.img`
   right: 0;
   margin: auto;
   animation: animate 2s infinite alternate;
+  transition: opacity 0.2s ease-in-out;
   @media only screen and (max-width: 768px) {
     width: 300px;
     height: 300px;
@@ -106,17 +106,28 @@ const Img = styled.img`
 `;
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % 12);
+    }, 5000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <Section id="home">
       <Navbar />
+
       <Container>
         <Left>
           <Title>Think. Make. Solve.</Title>
           <WhatWeDo>
             <Line src="portfolioApp/line.png" />
-            <Subtitle>What we do</Subtitle>
+            <Subtitle>What I do</Subtitle>
           </WhatWeDo>
-          <Desc>We enjoy creating ...da.fdsfa.sf.asf</Desc>
+          <Desc Texts={statementsWhatIDo} />
           <Button>Lear more</Button>
         </Left>
         <Right>
@@ -136,7 +147,7 @@ const Hero = () => {
               <OrbitControls enableZoom={false} autoRotate />
             </Suspense>
           </Canvas>
-          <Img src="portfolioApp/moon.png" alt="" />
+          <Img src={`portfolioApp/Me/${currentImage}.webp`} alt="" />
         </Right>
       </Container>
     </Section>

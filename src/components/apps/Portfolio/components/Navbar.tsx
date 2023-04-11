@@ -28,8 +28,8 @@ const Links = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 50px;
   cursor: pointer;
+  height: 20px;
 `;
 
 const List = styled.ul`
@@ -67,12 +67,10 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="portfolioApp/logo.png" />
+          <Logo src="portfolioApp/codecraft.svg" />
           <List>
             <ListItem onClick={() => scrollToSection("home")}>Home</ListItem>
-            <ListItem onClick={() => scrollToSection("studio")}>
-              Studio
-            </ListItem>
+            <ListItem onClick={() => scrollToSection("studio")}>Me</ListItem>
             <ListItem onClick={() => scrollToSection("works")}>Works</ListItem>
             <ListItem onClick={() => scrollToSection("contact")}>
               Contact

@@ -1,3 +1,4 @@
+import { statementsWhoAmI } from "@/data";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
@@ -67,19 +68,6 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-const statements = [
-  "I am a dreamer, constantly chasing after new adventures and opportunities to expand my horizons.",
-  "I am an explorer, always seeking to discover the hidden gems of life and unravel its mysteries.",
-  "I am an artist, expressing my emotions and thoughts through colors, shapes, and textures, creating my own unique masterpiece.",
-  "I am a storyteller, narrating my experiences and weaving them into a tapestry of memories that define my journey.",
-  "I am a warrior, facing challenges head-on with courage and resilience, never backing down from a battle worth fighting.",
-  "I am a teacher, sharing my knowledge and wisdom with others, inspiring and guiding them towards their own paths of growth.",
-  "I am a healer, offering comfort and solace to those in need, spreading love and compassion wherever I go.",
-  "I am a visionary, envisioning a brighter future and taking bold steps towards turning my dreams into reality.",
-  "I am a catalyst for change, challenging the status quo and striving to make a positive impact in the world.",
-  "I am a seeker of truth, constantly questioning and exploring the depths of knowledge and wisdom.",
-];
-
 const Who = () => {
   return (
     <Section id="studio">
@@ -100,7 +88,7 @@ const Who = () => {
             <Line src="portfolioApp/line.png" />
             <Subtitle>Who am I? </Subtitle>
           </WhatWeDo>
-          <Desc Texts={statements} />
+          <Desc Texts={statementsWhoAmI} />
           <Button>See my works</Button>
         </Right>
       </Container>

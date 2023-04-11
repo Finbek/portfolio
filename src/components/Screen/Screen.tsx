@@ -57,8 +57,8 @@ const appBoxes = [
         openOnClick: "AppWindow",
       },
       {
-        appName: "Photos",
-        appIconUrl: "/appIcons/next.svg",
+        appName: "Me",
+        appIconUrl: "/appIcons/me.webp",
         appUrl: "https://dangame.netlify.app/",
         openOnClick: "Portfolio",
       },
@@ -91,6 +91,7 @@ const Screen = () => {
       <Topbar />
 
       <MenuLayout appBoxes={appBoxes} />
+      {/* <Me /> */}
 
       <Dock />
     </Container>
