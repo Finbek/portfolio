@@ -1,0 +1,28 @@
+.firefly {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 20px #ff0, 0 0 40px #ff0, 0 0 60px #ff0, 0 0 80px #ff0,
+    0 0 100px #ff0, 0 0 120px #ff0;
+  animation: fly 5s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(40px, 60px) rotate(90deg);
+  }
+  50% {
+    transform: translate(80px, 120px) rotate(180deg);
+  }
+  75% {
+    transform: translate(120px, 60px) rotate(270deg);
+  }
+  100% {
+    transform: translate(160px, 0) rotate(360deg);
+  }
+}

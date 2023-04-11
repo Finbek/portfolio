@@ -1,0 +1,19 @@
+.appBoxWindow {
+  @apply fixed inset-0 bg-opacity-75 z-50 flex items-center justify-center;
+
+  backdrop-filter: blur(5px);
+
+  .appGrid {
+    @apply h-1/2 w-1/2 flex-col gap-9 flex;
+
+    .header {
+      .title {
+        @apply font-medium text-5xl text-white;
+      }
+    }
+
+    .apps {
+      @apply grid grid-cols-5 justify-start items-start;
+    }
+  }
+}

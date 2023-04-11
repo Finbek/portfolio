@@ -1,0 +1,30 @@
+.draggable {
+  cursor: pointer;
+  animation: jump 0.4s ease-in-out 1;
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+.draggable > * {
+  pointer-events: none;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: scale(1.025);
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: scale(1.05);
+    transform: translateY(-12px);
+  }
+  75% {
+    transform: translateY(-6px), scale(1.075);
+  }
+  100% {
+    transform: translateY(0), scale(1.1);
+  }
+}

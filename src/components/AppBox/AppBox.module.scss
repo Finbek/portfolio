@@ -1,0 +1,21 @@
+.container {
+  @apply flex flex-col gap-2 items-center justify-center;
+  .appBox {
+    @apply rounded-md shadow-lg overflow-hidden w-16 h-16;
+    background-color: rgba(255, 255, 255, 0.338);
+
+    .appGrid {
+      @apply grid grid-cols-2 gap-x-2 p-2;
+    }
+
+    .appIcon {
+      @apply flex items-center justify-center;
+    }
+  }
+  .appBox > * {
+    pointer-events: none;
+  }
+  .title {
+    @apply text-sm text-white font-semibold;
+  }
+}

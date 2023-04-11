@@ -1,0 +1,8 @@
+[
+  { "id": "1", "name": "Mail", "icon": "mail", "badge": "new" },
+  { "id": "2", "name": "Calendar", "icon": "calendar" },
+  { "id": "3", "name": "Photos", "icon": "photos" },
+  { "id": "4", "name": "Maps", "icon": "maps" },
+  { "id": "5", "name": "Notes", "icon": "notes" },
+  { "id": "6", "name": "Settings", "icon": "settings" }
+]

@@ -1,16 +1,31 @@
 .topbar {
-  @apply flex justify-between items-center bg-gray-900 text-white py-2 px-4 text-sm absolute top-0 left-0 right-0;
+  @apply flex justify-between items-center bg-gray-900 text-white py-1 px-2 text-xs fixed top-0 left-0 right-0;
 }
 
 .dateTime {
-  @apply mr-4 flex;
+  @apply flex space-x-1 items-center text-xs;
 }
 
 .icons {
-  @apply flex ;
+  @apply flex items-center;
 }
 
 .wifiIcon,
 .chargeIcon {
-  @apply mr-4;
+  @apply mr-2;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    @apply py-0 px-2 text-xs;
+  }
+
+  .dateTime {
+    @apply text-xs;
+  }
+
+  .wifiIcon,
+  .chargeIcon {
+    @apply mr-1;
+  }
 }

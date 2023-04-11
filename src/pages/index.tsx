@@ -1,7 +1,5 @@
-import Screen from "@/components/Screen/Screen"
+import Screen from "@/components/Screen/Screen";
 
 export default function Home() {
-  return (
-    <Screen/>
-  )
+  return <Screen />;
 }

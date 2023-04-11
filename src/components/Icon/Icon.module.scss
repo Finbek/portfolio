@@ -1,0 +1,15 @@
+.iconContainer {
+  @apply flex flex-col items-center cursor-pointer text-center transition-all duration-300 ease-in-out max-w-fit min-h-fit;
+}
+
+.icon {
+  @apply rounded-md  flex justify-center items-center;
+}
+
+.icon:hover {
+  @apply bg-gray-200;
+}
+
+.appName {
+  @apply font-medium text-gray-600;
+}

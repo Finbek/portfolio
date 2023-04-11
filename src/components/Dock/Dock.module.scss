@@ -1,0 +1,40 @@
+.dock {
+  @apply fixed bottom-4 left-1/2 pb-3 rounded-full px-7;
+  background-color: rgba(159, 167, 167, 0.175);
+  transform: translateX(-50%);
+
+  ul {
+    @apply flex flex-nowrap justify-center items-center mt-1;
+    list-style: none;
+    padding: 0;
+
+    li {
+      @apply mx-3 my-2;
+      flex-grow: 1;
+      flex-basis: 0;
+
+      &:first-child {
+        @apply ml-0;
+      }
+
+      &:last-child {
+        @apply mr-0;
+      }
+
+      a {
+        @apply flex justify-center items-center w-12 h-12 rounded-2xl bg-white shadow-md transition-all duration-200;
+
+        i {
+          @apply text-lg text-gray-800;
+        }
+
+        &:hover {
+          @apply bg-gray-300 transform scale-125;
+        }
+      }
+    }
+    .border {
+      @apply border-r-[1px] border-gray-600 pr-6;
+    }
+  }
+}

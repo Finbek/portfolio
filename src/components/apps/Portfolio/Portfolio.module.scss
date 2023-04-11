@@ -1,0 +1,128 @@
+// color theme: "00887A", "FFCCBC", "FFFFFF", "D3E3FC", "77A6F7"
+
+$primary-color: #00887a;
+$secondary-color: #ffccbc;
+$tertiary-color: #ffffff;
+$quaternary-color: #d3e3fc;
+$accent-color: #77a6f7;
+
+.container {
+  width: 95vw;
+  height: 95vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  font-family: "Montserrat", sans-serif;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  color: white;
+  background: url("/portfolioApp/bg.jpeg");
+  align-items: center;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .section {
+    width: 100%;
+    background-color: $tertiary-color;
+    padding: 4rem 2rem;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: $primary-color;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: normal;
+      color: $primary-color;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin: 0 2rem 2rem;
+      text-align: center;
+      flex-basis: 33%;
+      max-width: 33%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 8rem;
+        width: 8rem;
+        background-color: $accent-color;
+        color: $tertiary-color;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+
+        svg {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contact-section {
+    background-color: $secondary-color;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: $primary-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
