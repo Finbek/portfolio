@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const Descript = styled.p`
+const Descript = styled.div`
   font-size: 24px;
   color: lightgray;
-
+  height: 120px;
+  display: flex;
   @media only screen and (max-width: 768px) {
-    padding: 20px;
+    font-size: 18px;
+
     text-align: center;
   }
 `;
@@ -72,8 +74,10 @@ const Desc = ({ Texts }: any) => {
 
   return (
     <Descript>
-      {currentText}
-      <Cursor>|</Cursor>
+      <span>
+        {currentText}
+        <Cursor>|</Cursor>
+      </span>
     </Descript>
   );
 };

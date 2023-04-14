@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import IphoneFrame from "./IphoneFrame";
 
 const Section = styled.div`
   height: 95vh;
@@ -7,6 +8,10 @@ const Section = styled.div`
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    height: 190vh;
+    scroll-snap-align: unset;
+  }
 `;
 
 const Container = styled.div`
@@ -15,6 +20,7 @@ const Container = styled.div`
   justify-content: space-between;
   @media only screen and (max-width: 768px) {
     width: 100%;
+    height: 100%;
     flex-direction: column;
   }
 `;
@@ -23,9 +29,13 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   @media only screen and (max-width: 768px) {
-    padding: 20px;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
   }
 `;
 
@@ -75,29 +85,67 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
 `;
 
-const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Product Design",
-  "Social Media",
-];
+const data = ["Nota AI", "Zala Inc", "Ezar Inc"];
 const Works = () => {
+  //function to change the iphone frame
+  const changeIphone = (item: string) => {
+    const iphone = document.getElementById("iphone-frame");
+    if (!iphone) {
+      return;
+    }
+    switch (item) {
+      case "Nota AI":
+        iphone.style.background = "url(/portfolioApp/nota.gif)";
+        iphone.style.backgroundRepeat = "no-repeat";
+        iphone.style.backgroundSize = "cover";
+        break;
+      case "Zala Inc":
+        iphone.style.backgroundImage = "url(/portfolioApp/zala.gif)";
+        iphone.style.backgroundRepeat = "no-repeat";
+        iphone.style.backgroundSize = "cover";
+        break;
+      case "Ezar Inc":
+        iphone.style.backgroundImage = "url(/portfolioApp/ezar.gif)";
+        iphone.style.backgroundRepeat = "no-repeat";
+        iphone.style.backgroundSize = "cover";
+
+        break;
+      default:
+        iphone.style.background = "black";
+    }
+  };
   return (
     <Section id="works">
       <Container>
         <Left>
           <List>
             {data.map((item) => (
-              //@ts-ignore
-              <ListItem key={item} text={item}>
+              <ListItem
+                key={item}
+                //@ts-ignore
+                text={item}
+                onMouseOver={() => changeIphone(item)}
+                onMouseLeave={() => changeIphone("")}
+              >
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
+        <Right>
+          <IphoneFrame />
+        </Right>
       </Container>
     </Section>
   );

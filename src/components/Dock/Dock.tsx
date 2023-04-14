@@ -1,36 +1,25 @@
+import { dockApplications } from "@/data";
+import Icon from "../Icon/Icon";
 import styles from "./Dock.module.scss";
 
 const Dock = () => {
-  const dockApplications = [
-    "fab fa-safari",
-    "fab fa-apple",
-    "fas fa-calendar",
-    "fas fa-music",
-    "fas fa-envelope",
-    "fab fa-safari",
-    "fab fa-apple",
-    "fas fa-calendar",
-    "fas fa-music",
-    "fas fa-envelope",
-    "fab fa-safari",
-    "fab fa-apple",
-    "fas fa-calendar",
-    "fas fa-music",
-    "fas fa-envelope",
-  ];
   return (
     <div className={styles.dock}>
       <ul>
         {dockApplications.map((each, ind) => (
           <li
-            key={each}
+            key={each.appName}
             className={`${
               ind === dockApplications.length - 4 ? styles.border : ""
             }`}
           >
-            <a href="#">
-              <i className={each}></i>
-            </a>
+            <Icon
+              appName={each.appName}
+              appIconUrl={each.appIconUrl}
+              appUrl={each.appUrl}
+              type={each.type}
+              size={35}
+            />
           </li>
         ))}
       </ul>

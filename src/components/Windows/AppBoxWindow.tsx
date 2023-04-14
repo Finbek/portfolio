@@ -47,7 +47,7 @@ const AppBoxWindow: React.FC<Props> = ({ title, apps, onClose, className }) => {
                 appName={app.appName}
                 appIconUrl={app.appIconUrl}
                 appUrl={app.appUrl}
-                openOnClick={app.openOnClick}
+                type={app.type}
               />
             </div>
           ))}

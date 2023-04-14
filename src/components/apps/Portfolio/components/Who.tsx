@@ -1,4 +1,5 @@
 import { statementsWhoAmI } from "@/data";
+import { scrollToSection } from "@/utils";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
@@ -34,17 +35,16 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   @media only screen and (max-width: 768px) {
     text-align: center;
     align-items: center;
-    heigh: 100%;
   }
 `;
 const Title = styled.h1`
   font-size: 74px;
   @media only screen and (max-width: 768px) {
-    font-size: 60px;
+    font-size: 40px;
   }
 `;
 const WhatWeDo = styled.div`
@@ -57,6 +57,9 @@ const Line = styled.img`
 `;
 const Subtitle = styled.h2`
   color: #da4ea2;
+  @media only screen and (max-width: 768px) {
+    font-size: 70px;
+  }
 `;
 
 const Button = styled.button`
@@ -89,7 +92,13 @@ const Who = () => {
             <Subtitle>Who am I? </Subtitle>
           </WhatWeDo>
           <Desc Texts={statementsWhoAmI} />
-          <Button>See my works</Button>
+          <Button
+            onClick={() => {
+              scrollToSection("works");
+            }}
+          >
+            See my career path
+          </Button>
         </Right>
       </Container>
     </Section>

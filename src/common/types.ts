@@ -2,7 +2,7 @@ interface AppProps {
   appName: string;
   appIconUrl: string;
   appUrl: string;
-  openOnClick: string;
+  type: string;
   className?: string;
   size?: number;
 }

@@ -11,6 +11,7 @@
   align-items: center;
 
   .windowBody {
+    @apply rounded-xl;
     display: flex;
     justify-content: center;
     align-items: center;

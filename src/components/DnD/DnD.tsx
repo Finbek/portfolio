@@ -45,10 +45,10 @@ const DragAndDrop: React.FC<Props> = ({ initialPosition, children }) => {
 
       const { innerHeight, innerWidth } = window;
 
-      const isOverTop = newY < innerHeight * 0.0;
+      const isOverTop = newY < innerHeight * 0.05;
       const isOverLeft = newX < innerWidth * 0.02;
       const isOverRight = newX + dragOffset.x > innerWidth * 0.98;
-      const isOverBottom = newY + dragOffset.y > innerHeight * 0.95;
+      const isOverBottom = newY + dragOffset.y > innerHeight * 0.85;
 
       if (
         !isOverTop &&

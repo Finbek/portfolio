@@ -60,3 +60,56 @@ export const statementsWhatIDo = [
   "Collaborate with stakeholders, such as clients or end-users, to gather requirements and provide technical guidance.",
   "Design and implement software solutions for scalability and high availability in distributed systems.",
 ];
+
+export const experience = [
+  {
+    title: "Frontend developer",
+    subtitle: "More than 2 years",
+    icon: "uil uil-briefcase-alt",
+    skills: [
+      { skill: "HTML", percentage: 95, icon: "uil uil-html5" },
+      { skill: "Javascript", percentage: 90, icon: "uil uil-java-script" },
+      { skill: "React", percentage: 85, icon: "uil uil-react" },
+      { skill: "Next.js", percentage: 80, icon: "portfolioApp/next.svg" },
+      { skill: "CSS", percentage: 60, icon: "uil  uil-css3-simple" },
+      { skill: "Sass", percentage: 60, icon: "fa-brands fa-sass" },
+      { skill: "Flutter", percentage: 40, icon: "portfolioApp/flutter.svg" },
+    ],
+  },
+  {
+    title: "Backend developer",
+    subtitle: "More than 2 years",
+    icon: "uil uil-briefcase-alt",
+    skills: [
+      { skill: "Python", percentage: 90, icon: "fa-brands fa-python" },
+      { skill: "Golang", percentage: 80, icon: "fa-brands fa-golang" },
+      { skill: "C/C++", percentage: 80, icon: "portfolioApp/c-.png" },
+      { skill: "Django", percentage: 60, icon: "portfolioApp/django.png" },
+      { skill: "Gin", percentage: 60, icon: "portfolioApp/gin.svg" },
+      { skill: "Node.js", percentage: 60, icon: "portfolioApp/node.png" },
+    ],
+  },
+  {
+    title: "Database developer",
+    subtitle: "More than 2 years",
+    icon: "uil uil-briefcase-alt",
+    skills: [
+      { skill: "MySQL", percentage: 90, icon: "portfolioApp/mysql.svg" },
+      { skill: "MongoDB", percentage: 80, icon: "portfolioApp/mongodb.svg" },
+      { skill: "Redis", percentage: 60, icon: "portfolioApp/redis.png" },
+    ],
+  },
+  {
+    title: "Tools and Technologies",
+    subtitle: "",
+    icon: "uil uil-briefcase-alt",
+    skills: [
+      { skill: "AWS", percentage: 90, icon: "fa-brands fa-aws" },
+      { skill: "Git", percentage: 90, icon: "fa-brands fa-git" },
+      { skill: "REST API", percentage: 90, icon: "portfolioApp/restapi.png" },
+      { skill: "Unity3D", percentage: 90, icon: "fa-brands fa-unity" },
+      { skill: "Jenkins", percentage: 90, icon: "fa-brands fa-jenkins" },
+      { skill: "Argo CD", percentage: 90, icon: "portfolioApp/argocd.svg" },
+    ],
+  },
+];

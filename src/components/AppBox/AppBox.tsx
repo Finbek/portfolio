@@ -31,16 +31,17 @@ const AppBox: React.FC<Props> = ({ title, apps, className }) => {
                 appIconUrl={app.appIconUrl}
                 appUrl={app.appUrl}
                 size={25}
-                openOnClick={app.openOnClick}
+                type={app.type}
               />
             </div>
           ))}
         </div>
       </div>
+      <span className={styles.title}>{title}</span>
+
       {isOpen && (
         <AppBoxWindow title={title} apps={apps} onClose={handleClose} />
       )}
-      <span className={styles.title}>{title}</span>
     </div>
   );
 };

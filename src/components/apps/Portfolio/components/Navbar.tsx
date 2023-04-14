@@ -67,11 +67,14 @@ const Navbar = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="portfolioApp/codecraft.svg" />
+          <Logo src="portfolioApp/codecraft.webp" />
           <List>
             <ListItem onClick={() => scrollToSection("home")}>Home</ListItem>
             <ListItem onClick={() => scrollToSection("studio")}>Me</ListItem>
-            <ListItem onClick={() => scrollToSection("works")}>Works</ListItem>
+            <ListItem onClick={() => scrollToSection("skills")}>
+              Skills
+            </ListItem>
+            <ListItem onClick={() => scrollToSection("works")}>Career</ListItem>
             <ListItem onClick={() => scrollToSection("contact")}>
               Contact
             </ListItem>

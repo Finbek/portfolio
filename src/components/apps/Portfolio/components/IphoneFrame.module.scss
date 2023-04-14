@@ -1,0 +1,63 @@
+.contain {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phonebody-external {
+  margin: 0 auto;
+  position: relative;
+  background: black;
+  width: 45vh;
+  height: 91vh;
+  border-radius: 6vh;
+  padding: 1.5vh;
+  border: 0.3vh solid #444;
+  box-shadow: inset 0 0 2vh #888;
+}
+
+.phonebody-internal {
+  width: 100%;
+  height: 100%;
+  border-radius: 4vh;
+  background-size: 100% 100%;
+}
+
+.top {
+  width: 26vh;
+  background: black;
+  height: 3.5vh;
+  border-radius: 0vh 0vh 2vh 2vh;
+  margin: 0 auto;
+}
+
+.circle {
+  background: blue;
+  width: 0.6vh;
+  height: 0.6vh;
+  float: right;
+  margin: 1.2vh 6vh;
+  border-radius: 100%;
+}
+
+.icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 3vh;
+}
+
+.fa {
+  font-size: 2.5vh;
+  color: white;
+}
+
+.bottom {
+  width: 100%;
+  height: 2vh;
+  background: black;
+  border-radius: 2vh;
+}

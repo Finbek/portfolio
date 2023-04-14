@@ -26,6 +26,9 @@ $accent-color: #77a6f7;
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: center;
+    @media only screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
   }
 
   h2 {
@@ -35,6 +38,9 @@ $accent-color: #77a6f7;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .section {

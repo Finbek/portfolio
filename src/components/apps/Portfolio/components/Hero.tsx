@@ -16,6 +16,7 @@ const Section = styled.div`
   align-items: center;
   @media only screen and (max-width: 768px) {
     height: 190vh;
+    scroll-snap-align: unset;
   }
 `;
 
@@ -29,6 +30,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 90%;
   }
 `;
 
@@ -44,6 +46,7 @@ const Left = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
+    scroll-snap-align: center;
   }
 `;
 const Title = styled.h1`
@@ -78,8 +81,11 @@ const Right = styled.div`
   flex: 3;
   @media only screen and (max-width: 768px) {
     flex: 1;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    scroll-snap-align: center;
   }
 `;
 const Img = styled.img`
