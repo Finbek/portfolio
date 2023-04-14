@@ -26,7 +26,7 @@ const Icon: React.FC<AppProps> = ({
         return <Calculator onClose={() => setIsOpen(false)} />;
       case "Wallpapers":
         return <Wallpapers onClose={() => setIsOpen(false)} />;
-      case "Attributions":
+      case "Attributes":
         return <Attributions onClose={() => setIsOpen(false)} />;
       case "Books":
       // return <Books onClose={() => setIsOpen1(false)} />;
