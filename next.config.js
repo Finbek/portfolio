@@ -1,24 +1,17 @@
 const path = require("path");
 
-const repo = "p";
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-let assetPrefix = "";
-let basePath = "/";
-
-if (isGithubActions) {
-  // trim off `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
+const isProd = process.env.NODE_ENV === "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: assetPrefix,
+  assetPrefix: isProd ? "/portfolio/" : "",
+  images: {
+    unoptimized: true,
+  },
   basePath: basePath,
   reactStrictMode: true,
+  loader: "imgix",
+  path: 'the "domain" of your Imigix source',
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")],
     prependData: `@import "media.scss";`,
