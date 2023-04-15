@@ -1,10 +1,10 @@
+import { mapFeatures } from "@/data/map-features";
 import {
   Annotation,
   ComposableMap,
   Geographies,
   Geography,
 } from "react-simple-maps";
-
 const Map = () => {
   return (
     <ComposableMap
@@ -16,7 +16,7 @@ const Map = () => {
       style={{ width: "100%", height: "100%" }}
     >
       <Geographies
-        geography="/portFolioApp/features.json"
+        geography={mapFeatures}
         fill="#2C065D"
         stroke="#FFFFFF"
         strokeWidth={0.5}
