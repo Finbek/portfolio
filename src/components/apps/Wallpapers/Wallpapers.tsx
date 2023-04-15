@@ -1,5 +1,6 @@
 import Window from "@/components/Windows/Window";
 import { wallpapers } from "@/data";
+import useLocalStorage from "@/hooks/LocalStorage";
 import styles from "./Wallpapers.module.scss";
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const Wallpapers: React.FC<Props> = ({ onClose }) => {
+  const [value, setValue] = useLocalStorage("wallpaper", 0);
   const handleScroll = (e: any) => {
     const scrollAmount = e.target.scrollLeft;
     const sectionWidth = e.target.scrollWidth;
@@ -20,14 +22,14 @@ const Wallpapers: React.FC<Props> = ({ onClose }) => {
         screen.style.backgroundImage = `url(wallpapers/${
           wallpapers[wallpapers.length - 1]
         })`;
+        setValue(wallpapers.length - 1);
       } else {
         screen.style.backgroundImage = `url(wallpapers/${wallpapers[index]})`;
+        setValue(index);
       }
     }
   };
-  document.getElementById(
-    "screen"
-  )!.style.backgroundImage = `url(wallpapers/${wallpapers[0]})`;
+
   return (
     <Window onClose={onClose}>
       <div>
