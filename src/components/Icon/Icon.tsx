@@ -1,5 +1,4 @@
 import { cn } from "@/utils";
-import Image from "next/image";
 import React, { useState } from "react";
 import AppWindow from "../Windows/AppWindow";
 import Attributions from "../apps/Attributions/Attributions";
@@ -55,11 +54,10 @@ const Icon: React.FC<AppProps> = ({
           className={styles.icon}
           style={{ width: size, height: size, fontSize: size * 0.6 }}
         >
-          <Image
+          <img
             src={appIconUrl}
             alt={appName}
-            width={size * 0.8}
-            height={size * 0.8}
+            className={`w-[${size * 0.8}px] h-[${size * 0.8}px}]`}
           />
         </div>
         {appName !== "" && (
