@@ -6,7 +6,6 @@ import {
   Geography,
 } from "react-simple-maps";
 const Map = () => {
-  console.log(mapFeatures);
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"
