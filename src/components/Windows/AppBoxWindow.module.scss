@@ -5,10 +5,16 @@
 
   .appGrid {
     @apply h-1/2 w-1/2 flex-col gap-9 flex;
+    @media #{$phone} {
+      @apply gap-4;
+    }
 
     .header {
       .title {
         @apply font-medium text-5xl text-white;
+        @media #{$phone} {
+          @apply text-3xl;
+        }
       }
     }
 

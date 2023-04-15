@@ -12,11 +12,11 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
   align-items: center;
+  gap: 150px;
   padding: 10px 0;
   @media only screen and (max-width: 768px) {
-    width: 100%;
     padding: 10px;
   }
 `;

@@ -21,8 +21,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1200px;
-
+  width: 95%;
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 768px) {

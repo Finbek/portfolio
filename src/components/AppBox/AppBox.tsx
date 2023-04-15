@@ -1,3 +1,4 @@
+import useCheckMobileSize from "@/hooks/useCheckMobileSize";
 import { cn } from "@/utils";
 import React, { useState } from "react";
 import Icon from "../Icon/Icon";
@@ -15,7 +16,7 @@ const AppBox: React.FC<Props> = ({ title, apps, className }) => {
   const handleOpen = (event: React.MouseEvent<HTMLDivElement>) => {
     setIsOpen(true);
   };
-
+  const { isMobileSize } = useCheckMobileSize();
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -30,7 +31,7 @@ const AppBox: React.FC<Props> = ({ title, apps, className }) => {
                 appName={""}
                 appIconUrl={app.appIconUrl}
                 appUrl={app.appUrl}
-                size={25}
+                size={isMobileSize ? 10 : 25}
                 type={app.type}
               />
             </div>

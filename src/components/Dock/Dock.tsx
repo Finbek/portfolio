@@ -1,8 +1,10 @@
 import { dockApplications } from "@/data";
+import useCheckMobileSize from "@/hooks/useCheckMobileSize";
 import Icon from "../Icon/Icon";
 import styles from "./Dock.module.scss";
 
 const Dock = () => {
+  const { isMobileSize } = useCheckMobileSize();
   return (
     <div className={styles.dock}>
       <ul>
@@ -18,7 +20,7 @@ const Dock = () => {
               appIconUrl={each.appIconUrl}
               appUrl={each.appUrl}
               type={each.type}
-              size={35}
+              size={isMobileSize ? 10 : 35}
             />
           </li>
         ))}

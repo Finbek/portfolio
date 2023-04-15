@@ -1,3 +1,4 @@
+import useCheckMobileSize from "@/hooks/useCheckMobileSize";
 import { cn } from "@/utils";
 import React, { useRef } from "react";
 import Icon from "../Icon/Icon";
@@ -13,7 +14,7 @@ interface Props {
 
 const AppBoxWindow: React.FC<Props> = ({ title, apps, onClose, className }) => {
   const appGridRef = useRef<HTMLDivElement>(null);
-
+  const { isMobileSize } = useCheckMobileSize();
   const handleMainDivClick = (event: React.MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
     if (
@@ -48,6 +49,7 @@ const AppBoxWindow: React.FC<Props> = ({ title, apps, onClose, className }) => {
                 appIconUrl={app.appIconUrl}
                 appUrl={app.appUrl}
                 type={app.type}
+                size={isMobileSize ? 30 : 60}
               />
             </div>
           ))}
