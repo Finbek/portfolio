@@ -6,7 +6,7 @@ import Topbar from "../Topbar/Topbar";
 
 const Screen = () => {
   const bg = wallpapers[getRandomInt(wallpapers.length - 1)];
-  console.log(bg);
+
   return (
     <div
       className="flex flex-col h-[100vh] overflow-hidden"

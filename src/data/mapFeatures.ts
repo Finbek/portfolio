@@ -1,5 +1,3 @@
-
-
 export const mapFeatures = {
   "type": "Topology",
   "objects": {

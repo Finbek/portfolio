@@ -1,4 +1,4 @@
-import { mapFeatures } from "@/data/map-features";
+import { mapFeatures } from "@/data";
 import {
   Annotation,
   ComposableMap,
