@@ -34,6 +34,6 @@ As an ongoing development project, new features and updates will be added to the
 
 ## Contact Me
 
-I'd love to connect with you! If you have any questions or would like to collaborate, please feel free to reach out to me through the contact form on my portfolio app or via email at [your-email@example.com](mailto:your-email@example.com).
+I'd love to connect with you! If you have any questions or would like to collaborate, please feel free to reach out to me through the contact form on my portfolio app.
 
 Thank you for visiting my Portfolio App!
